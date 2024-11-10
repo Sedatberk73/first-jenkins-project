@@ -46,7 +46,6 @@ test.describe('Test Group', () => {
    await page.getByText("Inputs").click();
    let inputBox = page.locator("//input[@type='number']");
    await inputBox.fill("123");
-   await page.waitForTimeout(3000);
    let inputValue = await inputBox.inputValue();
    expect(inputValue).toBe("123");
    console.log(inputValue);
